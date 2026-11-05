@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #172b4d;
+}
+
+header {
+    background: #101d35;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #63a4ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+.hero {
+    margin: 35px auto;
+    width: 86%;
+    padding: 65px 45px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #10254b, #155eef);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    max-width: 600px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 550px;
+    color: #e0eaff;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 9px;
+    background: #ffb020;
+    color: #172b4d;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.categories {
+    width: 86%;
+    margin: 45px auto;
+}
+
+.categories h2 {
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(20, 40, 80, 0.06);
+}
+
+.category-card h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.category-card p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 40px 25px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

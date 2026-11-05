@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StadiumMate | Your Matchday Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">STADIUMMATE</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Explore</a>
+            <a href="#orders">My Orders</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Never Miss a Moment of the Game.</h1>
+
+        <p>
+            Your matchday, made easier. Order your favourite food,
+            refreshing drinks and team merchandise directly to your stadium seat.
+        </p>
+
+        <button id="scanBtn">📷 Scan Your Seat QR Code</button>
+    </section>
+
+    <!-- QR Scanner Section -->
+    <section id="qr-section"
+        style="display:none; width:86%; margin:30px auto; background:white; padding:25px; border-radius:15px;">
+
+        <h2>Identify Your Stadium Seat</h2>
+
+        <p>Scan the QR code attached to your seat to start ordering.</p>
+
+        <div id="reader"
+            style="width:100%; max-width:400px; margin:20px auto;">
+        </div>
+
+        <p id="scan-result"></p>
+
+        <button id="closeScanner"
+            style="background:#e5eaf2;">
+            Close Scanner
+        </button>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+
+        <h2>Everything You Need, Right at Your Seat</h2>
+
+        <div class="category-grid">
+
+            <!-- Food -->
+            <div class="category-card">
+                <h3>🍔 Food & Snacks</h3>
+                <p>Enjoy your favourite matchday snacks without leaving your seat.</p>
+                <button onclick="openCategory('food')">Order Food</button>
+            </div>
+
+            <!-- Beverages -->
+            <div class="category-card">
+                <h3>🥤 Beverages</h3>
+                <p>Stay refreshed throughout the match.</p>
+                <button onclick="openCategory('beverages')">Order Beverages</button>
+            </div>
+
+            <!-- Merchandise -->
+            <div class="category-card">
+                <h3>👕 Team Merchandise</h3>
+                <p>Show your support with team jerseys and merchandise.</p>
+                <button onclick="openCategory('merchandise')">Shop Merchandise</button>
+            </div>
+
+            <!-- Order Tracking -->
+            <div class="category-card" id="orders">
+                <h3>📦 Order Tracking</h3>
+                <p>Follow your order from preparation to seat delivery.</p>
+                <button onclick="openOrders()">Track My Orders</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product-section"
+        class="categories"
+        style="display:none;">
+
+        <h2 id="product-heading">Food Menu</h2>
+
+        <div class="category-grid" id="product-list"></div>
+
+        <button onclick="closeCategory()">Back to Categories</button>
+
+    </section>
+
+    <!-- QR Scanner Library -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
